@@ -57,7 +57,7 @@ User.remove({}).then(() => {
                 yearFormed: 1998
             }),
 
-            return riloBand.save()
+            // return riloBand.save()
         }).catch((error) => {
             console.log('!!! ERROR SAVING SEEDED DATA !!!')
             console.log(error)
