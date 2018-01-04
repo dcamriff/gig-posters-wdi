@@ -20,7 +20,7 @@ mongoose.connection.on('error', (error) => {
 
 // delete users then add fake test ones
 User.remove({}).then(() => {
-    const dianeRiffel = new User({
+    const diane = new User({
         username: 'lil_diane',
         email: 'diane@saturationproject.com',
         firstName: 'Diane',
@@ -28,7 +28,7 @@ User.remove({}).then(() => {
         photoUrl: 'https://i.imgur.com/nbG1deE.png'
     })
 
-    const riloKiley1 = new Poster({
+    const riloPoster = new Poster({
         title: 'Riley Kiley 2005 Tour',
         story: 'Favorite Poster',
         yearOfShow: 2005,
@@ -41,4 +41,33 @@ User.remove({}).then(() => {
         limtedEdition: true,
         bands: 'Rilo Kiley'
     })
+
+    diane.posters.push(riloPoster)
+
+    return diane.save()
 })
+    .then(() => {
+        return Band.create({
+            const riloBand = new Band({
+                bandName: 'Rilo Kiley',
+                hometown: 'Los Angeles',
+                profile: 'Indie Rock band with members Jenny Lewis, Blake Sennett, Pierre de Reeder, and Dave Rock',
+                imageUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-1/c71.0.480.480/p480x480/488009_421767014564976_284023470_n.jpg?oh=34a3f8bd166e83123bb03d1c3375dd37&oe=5AED0607',
+                website: 'https://www.rilokiley.com/',
+                yearFormed: 1998
+            }),
+
+            return riloBand.save()
+        }).catch((error) => {
+            console.log('!!! ERROR SAVING SEEDED DATA !!!')
+            console.log(error)
+        }).then(() => {
+            mongoose.connection.close()
+            console.log(`
+    Finished seeding database...
+    
+    Disconnected from MongoDB
+    `)
+        })
+    })
+
