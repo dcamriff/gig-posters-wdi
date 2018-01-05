@@ -1,0 +1,40 @@
+<div class='nav-bar'>
+    <a href='/users'>Home</a> / Hello. Let's Create a Profile
+</div>
+<div class='bubble'>
+
+    <h2>Your Info</h2>
+    <div>
+        <form action='/users' method='POST'>
+            <div class='form-input'>
+                <label for='username'>username</label>
+                <input type='text' name='username' required/>
+            </div>
+
+            <div class='form-input'>
+                <label for='email'>email</label>
+                <input type='text' name='email' />
+            </div>
+
+            <div class='form-input'>
+                <label for='firstName'>first name</label>
+                <input type='text' name='firstName' required/>
+            </div>
+
+            <div class='form-input'>
+                <label for='lastName'>last name</label>
+                <input type='text' name='lastName' required/>
+            </div>
+
+            <div class='form-input'>
+                <label for='photoUrl'>Photo Url</label>
+                <input type='text' name='photoUrl' />
+            </div>
+
+            <div class='button-container flex-end'>
+                <input class='button-gold' type='submit' value='Create User'>
+                <a href='/users' class='button-muted'>Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
