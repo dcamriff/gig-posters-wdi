@@ -6,11 +6,11 @@ html.page-home {
 }
 
 html.page-other {
-  /* background-color: aquamarine; */
-  background-image: url("/images/bkrnd-other-v2.png");
+  background-image: url("/images/bkrnd-other-v3.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 body {
   /* display: flex; */
   /* flex-direction: column; */
