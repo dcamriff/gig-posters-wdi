@@ -18,11 +18,47 @@ mongoose.connection.on('error', (error) => {
 
 User.remove({}).then(() => {
     const diane = new User({
-        username: 'lil_diane2',
-        email: 'diane@saturationproject.com',
+        username: 'dcam',
+        email: 'diane321@testgmail.com',
         firstName: 'Diane',
-        lastName: 'Cam-Riffel'
+        lastName: 'Riffel',
+        photoUrl: "https://i.imgur.com/nbG1deE.png",
+        posters: []
     })
     console.log('User Diane created')
+
+    const tony = new User({
+        username: 'trif',
+        email: 'tony321@testgmail.com',
+        firstName: 'Tony',
+        lastName: 'Riffel',
+        photoUrl: "https://i.imgur.com/Cbf1P4q.png",
+        posters: []
+    })
+    console.log('User Tony created')
+
+    const rhonda = new User({
+        username: 'rudy1910',
+        email: 'rhonda321@testgmail.com',
+        firstName: 'Rhonda',
+        lastName: 'Holloway',
+        photoUrl: "https://i.imgur.com/k9IPbgp.png",
+        posters: []
+    })
+    console.log('User Rhonda created')
+
     diane.save()
+    tony.save()
+    rhonda.save()
+
+    }).catch((error) => {
+        console.log('!!! ERROR SAVING SEEDED DATA !!!')
+        console.log(error)
+    }).then(() => {
+        mongoose.connection.close()
+        console.log(`
+Finished seeding database...
+
+Disconnected from MongoDB
+`)
 })
