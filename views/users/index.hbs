@@ -1,8 +1,9 @@
+<html class='page-home'>
 <div>
     Welcome
 </div>
-<div>
-    <div class='user-bubble'>
+<div class='user-container'>
+    <div class='user-bubbles-section'>
         {{#each users}}
         <a href="/users/{{this._id}}" class='link user-bubble'>
             <div class='user-photo'>
@@ -10,7 +11,7 @@
                 <img src="{{this.photoUrl}}" alt="{{this.username}}' profile pic"> {{else}}
                 <img src="https://i.imgur.com/nbG1deE.png" alt="{{this.username}}' profile pic"> {{/if}}
             </div>
-            <div>
+            <div class='user-name'>
                 {{this.firstName}} {{this.LastName}}
             </div>
         </a>
@@ -23,3 +24,4 @@
         </a>
     </div>
 </div>
+</html>
