@@ -25,7 +25,6 @@ User.remove({}).then(() => {
         photoUrl: "https://i.imgur.com/nbG1deE.png",
         posters: []
     })
-    console.log('User Diane created')
 
     const tony = new User({
         username: 'trif',
@@ -35,7 +34,6 @@ User.remove({}).then(() => {
         photoUrl: "https://i.imgur.com/Cbf1P4q.png",
         posters: []
     })
-    console.log('User Tony created')
 
     const rhonda = new User({
         username: 'rudy1910',
@@ -45,17 +43,41 @@ User.remove({}).then(() => {
         photoUrl: "https://i.imgur.com/k9IPbgp.png",
         posters: []
     })
-    console.log('User Rhonda created')
+
+    const riloBand = new Band({
+        bandName: 'Rilo Kiley',
+        hometown: 'Los Angeles',
+        profile: 'Indie Rock band with members Jenny Lewis, Blake Sennett, Pierre de Reeder, and Dave Rock',
+        imageUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-1/c71.0.480.480/p480x480/488009_421767014564976_284023470_n.jpg?oh=34a3f8bd166e83123bb03d1c3375dd37&oe=5AED0607',
+        website: 'https://www.rilokiley.com/',
+        yearFormed: 1998
+    })
 
     diane.save()
-    tony.save()
-    rhonda.save()
+    .then(user => {
+        console.log(`User ${user.username} created`)
+        return tony.save()
+    })
+    
+    .then(user => {
+        console.log(`User ${user.username} created`)
+        return rhonda.save()
+    })
+
+    .then(user => {
+        console.log(`User ${user.username} created`)
+        return riloBand.save()
+    })
+
+    .then(band => {
+        riloBand.save()
+        mongoose.connection.close()
+    })
 
     }).catch((error) => {
         console.log('!!! ERROR SAVING SEEDED DATA !!!')
         console.log(error)
     }).then(() => {
-        mongoose.connection.close()
         console.log(`
 Finished seeding database...
 
