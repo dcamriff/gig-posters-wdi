@@ -66,64 +66,13 @@ a {
   background: black;
 }
 
-/* ---------------------------------- */
-/* .wrapper {
-  display: flex;  
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
-}
-
-.wrapper > * {
-  padding: 10px;
-  flex: 1 100%;
-}
-
-.header {
-  background: tomato;
-}
-
-.footer {
-  background: lightgreen;
-}
-
-.main {
-  text-align: left;
-  background: deepskyblue;
-}
-
-.aside-1 {
-  background: gold;
-}
-
-.aside-2 {
-  background: hotpink;
-}
-
-@media all and (min-width: 600px) {
-  .aside { flex: 1 auto; }
-}
-
-@media all and (min-width: 800px) {
-  .main    { flex: 3 0px; }
-  .aside-1 { order: 1; } 
-  .main    { order: 2; }
-  .aside-2 { order: 3; }
-  .footer  { order: 4; }
-}
-
-body {
-  padding: 2em; 
-} */
-
-/* ----------- other responsive layout options ---------------- */
+/* ----- other responsive layout forked example from codepen/girliemac -------- */
 * {
   box-sizing: border-box;
 }
 body {
   margin: 1em;
   font: 1.2em/1.3em 'Montserrat', sans-serif;
-  /* color: #fff; */
 }
 h1 {
   font-weight: normal;
@@ -178,10 +127,6 @@ footer,
 header, footer {
  display: block;
  min-height: 80px;
-}
-
-header {
- /* background: #633; */
 }
 
 footer {
