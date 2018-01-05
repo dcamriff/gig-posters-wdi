@@ -85,7 +85,7 @@ const BandSchema = new Schema(
 )
 
 module.exports = {
-    UserSchema,
     PosterSchema,
+    UserSchema,
     BandSchema
 }
