@@ -1,0 +1,25 @@
+<div>
+    Welcome
+</div>
+<div>
+    <div class='user-bubbles'>
+        {{#each users}}
+        <a href="/users/{{this._id}}" class='link user-bubble'>
+            <div class='user-photo'>
+                {{#if this.photoUrl}}
+                <img src="{{this.photoUrl}}" alt="{{this.username}}' profile pic"> {{else}}
+                <img src="https://i.imgur.com/nbG1deE.png" alt="{{this.username}}' profile pic"> {{/if}}
+            </div>
+            <div>
+                {{this.firstName}} {{this.LastName}}
+            </div>
+        </a>
+        {{/each}}
+    </div>
+
+    <div class='button-gold'>
+        <a href="/users/new">
+            Sign Up
+        </a>
+    </div>
+</div>
