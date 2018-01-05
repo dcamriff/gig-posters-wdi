@@ -1,9 +1,21 @@
 /* GLOBAL */
+html {
+  /* background-color: aquamarine; */
+  background-image: url("/images/bkrnd-home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 50px;
   font: 14px;
   font-family: 'Montserrat', sans-serif;
+  /* height: 80%;
+  width: 80%;
+  border: 5px solid black; */
 }
 
 a {
