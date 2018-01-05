@@ -4,6 +4,7 @@ const User = require('../db/models/User')
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
+  console.log("Get all")
   User.find({})
   .then((users) => {
     res.render('users/index.hbs', {
@@ -37,6 +38,7 @@ router.post('/', (req, res) => {
 
 // SHOW A USER
 router.get('/:userId', (req, res) => {
+  console.log("Get one")
   const userId = req.params.userId
   User.findById(userId)
   .then((user) => {

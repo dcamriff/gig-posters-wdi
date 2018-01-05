@@ -33,8 +33,13 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
-app.use('/', users)
+// app.use('/', users)
 app.use('/users', users)
+
+// redirect to Users page on load
+app.get('/', (req, res) => {
+  res.redirect('/users')
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -54,9 +59,6 @@ app.use(function(err, req, res, next) {
   res.render('error')
 });
 
-// redirect to Users page on load
-app.get('/', (req, res) => {
-  res.redirect('/users')
-})
+
 
 module.exports = app
