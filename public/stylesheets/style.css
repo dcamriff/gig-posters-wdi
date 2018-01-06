@@ -24,7 +24,7 @@ body {
 }
 
 a {
-  color: aquamarine;
+  color: rgb(31, 101, 78);
 }
 
 .user-container {
@@ -38,7 +38,7 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   box-sizing: border-box;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .user-bubble {
@@ -48,13 +48,13 @@ a {
   align-items: center;
   box-sizing: border-box;
   margin: 5px 5px;
-  margin-bottom: 40px;
-  /* background-color: #8E5133; */
+  margin-bottom: 20px;
   width: 175px;
   min-width: 150px;
-  height: 250px;
+  height: 225px;
   font-weight: bold;
-  color: white;
+  /* color: #3d3636; */
+  color: #8E5133;
   text-align: center;
   transition: all 0.25s ease;
 }
@@ -130,7 +130,8 @@ header, footer {
 }
 
 footer {
-background: #c66;
+font: .8em/.9em 'Montserrat', sans-serif;
+color: chocolate
 }
 
 /* Too narrow to support three columns */
