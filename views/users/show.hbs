@@ -5,10 +5,17 @@
     <div class='user-bubble'>
         {{#if user.photoUrl}}
         <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile picture"> {{else}}
-        <img src="/../public/images/pig-img.png" alt="{{user.username}}'s profile picture">
-        {{/if}}
+        <img src="/../public/images/pig-img.png" alt="{{user.username}}'s profile picture"> {{/if}}
     </div>
     <div class='user-profile'></div>
+    <div class='button-container'>
+        <div class='button-edit'>
+            <a href="/users/{{user._id}}/edit">Edit Profile</a>
+        </div>
+        <div class='button-delete'>
+            <a href="/users/{{user._id}}/delete">Delete Profile</a>
+        </div>
+    </div>
     <div>username:
         <b>{{user.username}}</b>
     </div>
@@ -19,4 +26,5 @@
         <a href="/users/{{user._id}}/posters">see my poster collection</a>
     </div>
 </div>
+
 </html>
