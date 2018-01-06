@@ -1,9 +1,21 @@
 <html class='page-other'>
 <div class='user-container'>
-    I'm the USERS/SHOW page
+    <div>Users SHOW Page</div>
+    <h1>{{user.firstName}} {{user.lastName}}</h1>
+    <div class='user-bubble'>
+        {{#if user.photoUrl}}
+        <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile picture"> {{else}}
+        <img src="/../public/images/pig-img.png" alt="{{user.username}}' profile picture">
+    </div>
+    <div class='user-profile'></div>
+    <div>username:
+        <b>{{user.username}}</b>
+    </div>
+    <div>email:
+        <b>{{user.email}}</b>
+    </div>
+    <div class: 'see-collection'>
+        <a href="/users/{{user._id}}/posters">see my poster collection</a>
+    </div>
 </div>
-<div class='user-bubble'>
-
-</div>
-
 </html>
