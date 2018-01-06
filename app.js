@@ -9,7 +9,10 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
 const index = require('./routes/indexController')
+
 const users = require('./routes/usersController')
+
+const posters = require('./routes/postersController')
 
 const app = express();
 
@@ -35,6 +38,7 @@ app.use(methodOverride('_method'))
 
 // app.use('/', users)
 app.use('/users', users)
+app.use('/users/:userId/posters', posters)
 
 // redirect to Users page on load
 app.get('/', (req, res) => {
