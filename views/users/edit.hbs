@@ -1,6 +1,6 @@
 <html class='page-other'>
 <div>
-    <a href="/users/{{user._id}}">back to Profile</a>
+    <a href="/users/{{user._id}}">Profile</a> / Edit Profile
 </div>
 
 <div class='form'>
@@ -25,10 +25,10 @@
             </div>
             <div class='form-input'>
                 <label for="photoUrl">photo URL:</label>
-                <input type="text" name="photoUrl" value="{{user.photoUrl}}" required/>
+                <input type="text" name="photoUrl" value="{{user.photoUrl}}" />
             </div>
-            <div class='button-container'>
-                <input class='button-edit' type='submit' value='Update Profile'></input>
+            <div class='button-container flex-end'>
+                <input class='button-edit' type='submit' value='Update Profile'>
                 <a href="/users/{{user._id}}" class='button-muted'>Cancel</a>
             </div>
         </form>

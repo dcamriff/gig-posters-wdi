@@ -8,7 +8,8 @@ router.get('/', (req, res, next) => {
   User.find({})
   .then((users) => {
     res.render('users/index.hbs', {
-      users
+      users,
+      pageTitle: 'Home'
     })
   })
   .catch((error) => {
@@ -60,7 +61,7 @@ router.get('/:userId/edit', (req, res) => {
   .then((user) => {
     res.render('users/edit.hbs', {
       user,
-      pageTitle: 'UserProfile_Update'
+      pageTitle: 'Profile_Update'
     })
   })
   .catch((error) => {
@@ -83,12 +84,12 @@ router.get('/:userId/delete', (req, res) => {
 
 // SHOW UPDATED USER
 router.put('/:userId', (req, res) => {
-  const userId = req.params.userId
   const updatedUserInfo = req.body
+  const userId = req.params.userId
 
   User.findByIdAndUpdate(userId, updatedUserInfo, {new: true})
   .then(() => {
-    res.redirect('/users/${userId}')
+    res.redirect(`/users/${userId}`)
   })
 })
 
