@@ -1,6 +1,39 @@
 <html class='page-other'>
 <div>
-    I'm the USERS/EDIT page
+    <a href="/users/{{user._id}}">back to Profile</a>
 </div>
+
+<div class='form'>
+    <h2>Edit This Profile</h2>
+    <div>
+        <form action="/users/{{user._id}}?_method=PUT" method="POST">
+            <div class='form-input'>
+                <label for="username">username:</label>
+                <input type="text" name="username" value="{{user.username}}" required/>
+            </div>
+            <div class='form-input'>
+                <label for="email">email:</label>
+                <input type="text" name="email" value="{{user.email}}" />
+            </div>
+            <div class='form-input'>
+                <label for="firstName">first name:</label>
+                <input type="text" name="firstName" value="{{user.firstName}}" required/>
+            </div>
+            <div class='form-input'>
+                <label for="lastName">last name:</label>
+                <input type="text" name="lastName" value="{{user.lastName}}" required/>
+            </div>
+            <div class='form-input'>
+                <label for="photoUrl">photo URL:</label>
+                <input type="text" name="photoUrl" value="{{user.photoUrl}}" required/>
+            </div>
+            <div class='button-container'>
+                <input class='button-edit' type='submit' value='Update Profile'></input>
+                <a href="/users/{{user._id}}" class='button-muted'>Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 </html>

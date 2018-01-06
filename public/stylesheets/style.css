@@ -66,6 +66,10 @@ a {
   background: black;
 }
 
+.flex-end {
+  justify-content: flex-end;
+}
+
 /* ----- other responsive layout forked example from codepen/girliemac -------- */
 * {
   box-sizing: border-box;
