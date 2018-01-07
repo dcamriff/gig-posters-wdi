@@ -13,7 +13,7 @@ https://github.com/dcamriff/gig-posters-wdi
 ## INSPIRATION
 Love live music. Love going to shows. Love collecting screenprinted posters.
 
-## USER STORES
+## USER STORIES
 Link to my [Trello Board](https://trello.com/b/QJyMJsMU/gig-poster-collectors-app-wdi-p2) where I planned out my project.
 
 ## WIREFRAMES
