@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     .then((users) => {
       res.render('users/index', {
         users,
-        // pageTitle: 'Home'
+        pageTitle: 'Users'
       })
     })
     .catch((error) => {
@@ -19,14 +19,15 @@ router.get('/', (req, res) => {
 
 // CREATE A NEW USER
 router.get('/new', (req, res) => {
-  res.render('users/new')
+  res.render('users/new', {pageTitle: 'New User'})
 })
 
 router.post('/', (req, res) => {
   const newUser = req.body
-  if (!newUser.photoUrl) {
-    newUser.photoUrl = 'https://i.imgur.com/nbG1deE.png'
-  }
+
+  // if (!newUser.photoUrl) {
+  //   newUser.photoUrl = 'https://i.imgur.com/nbG1deE.png'
+  // }
 
   User.create(newUser)
     .then(() => {
@@ -37,7 +38,23 @@ router.post('/', (req, res) => {
     })
 })
 
-// SHOW A USER
+// EDIT A USER
+router.get('/:userId/edit', (req, res) => {
+  const userId = req.params.userId
+
+  User.findById(userId)
+    .then((user) => {
+      res.render('users/edit', {
+        user,
+        pageTitle: 'Update User'
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
+// SHOW A PARTICULAR USER
 router.get('/:userId', (req, res) => {
   console.log("Get one")
   const userId = req.params.userId
@@ -53,21 +70,6 @@ router.get('/:userId', (req, res) => {
     })
 })
 
-// EDIT A USER
-router.get('/:userId/edit', (req, res) => {
-  const userId = req.params.userId
-
-  User.findById(userId)
-    .then((user) => {
-      res.render('users/edit', {
-        user,
-        pageTitle: 'Profile_Update'
-      })
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-})
 
 // DELETE A USER
 router.get('/:userId/delete', (req, res) => {
