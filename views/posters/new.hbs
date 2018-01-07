@@ -1,6 +1,68 @@
 <html class='page-other'>
 <div>
-    I'm the POSTERS/NEW page
+    <a href="/users/{{userId}}">Profile</a> /
+    <a href="/users{{userId}}/posters">Posters</a> / New Poster
+</div>
+
+<div>
+    <h2>Add a New Poster:</h2>
+    <div>
+        <form action="/users/{{userId}}/posters" method="POST">
+
+        <div class='form-input'>
+            <label for="title">Poster Title:</label>
+            <input type="text" name="title" required>
+        </div>
+
+        <div>
+            <label for="story">Story Behind The Poster:</label>
+            <input type="text" name="story">
+        </div>
+
+        <div>
+            <label for="artist">Poster Artist:</label>
+            <input type="text" name="artist">
+        </div>
+
+        <div>
+            <label for="mediumType">Poster Medium:</label>
+            <input type="text" name="mediumType">
+        </div>
+
+        <div>
+            <label for="limitedEdition">Limited Edition?</label>
+            <input type="radio" name="limitedEdition" value="yes" checked> Yes<br>
+            <input type="radio" name="limitedEdition" value="no"> No<br>
+        </div>
+
+        <div>
+            <label for="imageUrl">Image URL:</label>
+            <input type="text" name="imageUrl">
+        </div>
+
+        <div>
+            <h3>Details about the gig ...</h3>
+        </div>
+
+        <div>
+            <label for="showYear">Show Year:</label>
+            <input type="text" name="showYear">
+        </div>
+
+        <div>
+            <label for="showLocation"> Show Location:</label>
+            <input type="text" name="showLocation">
+        </div>
+
+        <div>
+            <label for="band">Band</label>
+        </div>
+
+
+        </form>
+    </div>
+
+
 </div>
 
 </html>

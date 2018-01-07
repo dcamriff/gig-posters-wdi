@@ -13,17 +13,15 @@ const PosterSchema = new Schema(
             type: String,
             default: "Tell a fun memory about how/when this poster was acquired."
         },
-        yearOfShow: Number,
-        monthOfShow: Number,
-        dayOfShow: Number,
-        locationCity: String,
+        artist: String,
+        mediumType: String,
+        limitedEdition: String,
         imageUrl: {
             type: String,
             default: 'https://i.imgur.com/xUNTDKM.jpg'
         },
-        artist: String,
-        mediumType: String,
-        limitedEdition: Boolean,
+        showYear: String,
+        showLocation: String,
         band: String
     },
     {

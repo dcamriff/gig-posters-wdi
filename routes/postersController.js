@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('new', (req, res) => {
+router.get('/new', (req, res) => {
     const userId = req.params.userId
 
     res.render('posters/new.hbs', {
