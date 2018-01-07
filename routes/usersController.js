@@ -7,9 +7,9 @@ router.get('/', (req, res) => {
   console.log("Get all")
   User.find({})
     .then((users) => {
-      res.render('users/index.hbs', {
+      res.render('users/index', {
         users,
-        pageTitle: 'Home'
+        // pageTitle: 'Home'
       })
     })
     .catch((error) => {
@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 
 // CREATE A NEW USER
 router.get('/new', (req, res) => {
-  res.render('users/new.hbs')
+  res.render('users/new')
 })
 
 router.post('/', (req, res) => {
@@ -43,7 +43,7 @@ router.get('/:userId', (req, res) => {
   const userId = req.params.userId
   User.findById(userId)
     .then((user) => {
-      res.render('users/show.hbs', {
+      res.render('users/show', {
         user,
         pageTitle: user.username
       })
@@ -59,7 +59,7 @@ router.get('/:userId/edit', (req, res) => {
 
   User.findById(userId)
     .then((user) => {
-      res.render('users/edit.hbs', {
+      res.render('users/edit', {
         user,
         pageTitle: 'Profile_Update'
       })

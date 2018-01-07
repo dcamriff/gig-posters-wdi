@@ -70,6 +70,11 @@ a {
   justify-content: flex-end;
 }
 
+.button-container {
+  background-color: gray;
+  
+}
+
 /* ----- other responsive layout forked example from codepen/girliemac -------- */
 * {
   box-sizing: border-box;
