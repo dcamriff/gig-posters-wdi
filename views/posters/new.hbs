@@ -31,8 +31,8 @@
 
         <div>
             <label for="limitedEdition">Limited Edition?</label>
-            <input type="radio" name="limitedEdition" value="yes" checked> Yes<br>
-            <input type="radio" name="limitedEdition" value="no"> No<br>
+            <input type="radio" name="limitedEdition" value="yes" checked> Yes / 
+            <input type="radio" name="limitedEdition" value="no"> No
         </div>
 
         <div>
@@ -55,10 +55,14 @@
         </div>
 
         <div>
-            <label for="band">Band</label>
+            <label for="band">Band:</label>
+            <input type="text" name="band">
         </div>
 
-
+        <div class='button-container flex-end'>
+            <input class="button-gold" type="submit" value="Create Poster">
+            <a href="/users/{{user._id}}" class='button-muted'>Cancel</a>
+        </div>
         </form>
     </div>
 
