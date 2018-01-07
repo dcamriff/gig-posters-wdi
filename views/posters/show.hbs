@@ -1,6 +1,19 @@
 <html class='page-other'>
 <div>
     I'm the POSTERS/SHOW page
+    <a href="/users/{{userId}}">Profile</a> /
+    <a href="/users{{userId}}/posters">Posters</a> / {{poster.title}}
 </div>
 
+<div>
+    <div>
+        <h1>{{poster.title}}</h1>
+        <h3>{{poster.artist}}</h3>
+    </div>
+    <div>
+        
+    </div>
+    
+    <a class="button-muted" href="/users/{{userId}}/posters/{{poster._id}}/delete">Delete</a>
+</div>
 </html>
