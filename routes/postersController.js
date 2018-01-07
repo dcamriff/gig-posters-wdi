@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router({mergeParams: true})
 const User = require('../db/models/User')
 
+// GET POSTERS LISTING
 router.get('/', (req, res) => {
     const userId = req.params.userId
 
@@ -19,6 +20,7 @@ router.get('/', (req, res) => {
     })
 })
 
+// CREATE A NEW POSTER
 router.get('/new', (req, res) => {
     const userId = req.params.userId
 
@@ -28,7 +30,7 @@ router.get('/new', (req, res) => {
     })
 })
 
-router.get('/:storeId', (req, res) => {
+router.get('/:posterId', (req, res) => {
     const userId = req.params.userId
     const posterId = req.params.posterId
 
@@ -65,7 +67,7 @@ router.post('/', (req, res) => {
 
 router.get('/:posterId/delete', (req, res) => {
     const userId = req.params.userId
-    const storeId = req.params.storeId
+    const posterId = req.params.posterId
 
     User.findById(userId)
     .then((user) => {
