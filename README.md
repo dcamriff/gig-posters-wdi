@@ -17,27 +17,30 @@ Love live music. Love going to shows. Love collecting screenprinted posters.
 Link to my [Trello Board](https://trello.com/b/QJyMJsMU/gig-poster-collectors-app-wdi-p2) where I planned out my project.
 
 ## WIREFRAMES
-![Jeopardy-Home-Page-Wireframe](https://github.com/dcamriff/jeopardy-game-wdi/blob/master/images/Screen%20Shot%202017-12-11%20at%204.53.14%20PM.png)
+![Gig-Posters-Home-Page-Wireframe](https://github.com/dcamriff/gig-posters-wdi/blob/master/public/images/wireframes/Desktop%20HD.png)
 
-![Jeopardy-Trivia-Prompt-Wireframe](https://github.com/dcamriff/jeopardy-game-wdi/blob/master/images/wireframe-prompt.png)
+![Gig-Posters-User-Profile-Wireframe](https://github.com/dcamriff/gig-posters-wdi/blob/master/public/images/wireframes/Desktop%20HD-user.png)
+
+![Gig-Posters-Poster-Collection-Wireframe](https://github.com/dcamriff/gig-posters-wdi/blob/master/public/images/wireframes/Desktop%20HD-posters.png)
+
+![Gig-Posters-Poster-Profile-Wireframe](https://github.com/dcamriff/gig-posters-wdi/blob/master/public/images/wireframes/Desktop%20HD-poster%20details.png)
+
 
 ## TECHNOLOGIES USED
- - Languages - HTML5, CSS3, Javascript, jQuery
- - Design - Figma, Adobe Illustrator, Google Fonts, Annimate CSS by Dan Eden, Vexteezy and Toptal for background patterns
+ - Languages - HTML5, CSS3, Node.js Express
+ - Database Management - MongoDB, Heroku
+ - Design - Figma, Adobe Creative Cloud (Illustrator and Photoshop), Google Fonts, Annimate.css, PNGtree.com for background patterns
  - Project Planning & User Stories - Trello
  - Visual Studio Code 1.18
+ - Imgur.com
 
  ## FEATURES
- - Scoreboard
+ - Create, View, Delete, and Update Users
+ - Create, View, Delete, and Update Posters connected to a user
+ - View and Update Band info and link to their websites
  - Annimation
- - Highlights already played tiles
- - Alerts with correct answer
- - Reset Game Button
- - Alert When All Tiles Played/Player Won
+ - Responsiveness on different screen sizes
 
  ## FUTURE DEVELOPMENT
- - Add more responsive features
- - Add a second player feature
- - Add additional color and background themes for kids to choose from
- - Add modal-like display for questions and multiple choice answers
- - Add multiple games
+ - Add other collections
+ - Ability to like and comment on users' collections
