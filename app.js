@@ -8,11 +8,10 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
-const index = require('./routes/indexController')
-
+// const index = require('./routes/indexController')
 const users = require('./routes/usersController')
-
 const posters = require('./routes/postersController')
+const bands = require('./routes/bandsController')
 
 const app = express();
 
@@ -36,9 +35,11 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
+// REGISTERING CONTROLLERS
 // app.use('/', users)
 app.use('/users', users)
 app.use('/users/:userId/posters', posters)
+app.use('/bands', bands)
 
 // redirect to Users page on load
 app.get('/', (req, res) => {

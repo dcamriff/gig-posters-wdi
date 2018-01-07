@@ -26,7 +26,7 @@ const PosterSchema = new Schema(
     },
     {
         timestamps: {},
-        usePushEach: true
+        // usePushEach: true
     }
 )
 
