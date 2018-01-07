@@ -1,11 +1,11 @@
-html.page-home {
+.page-home {
   /* background-color: aquamarine; */
   background-image: url("/images/bkrnd-home.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-html.page-other {
+.page-other {
   background-image: url("/images/bkrnd-other-v3.png");
   background-repeat: no-repeat;
   background-size: cover;
