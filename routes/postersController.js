@@ -48,7 +48,7 @@ router.get('/:storeId', (req, res) => {
 
 router.post('/', (req, res) => {
     const userId = req.params.userId
-    const newStore = req.body
+    const newPoster = req.body
 
     User.findById(userId)
     .then((user) => {
