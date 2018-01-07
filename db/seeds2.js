@@ -23,7 +23,6 @@ User.remove({}).then(() => {
         firstName: 'Diane',
         lastName: 'Riffel',
         photoUrl: "https://i.imgur.com/nbG1deE.png",
-        posters: []
     })
 
     const tony = new User({
@@ -32,7 +31,6 @@ User.remove({}).then(() => {
         firstName: 'Tony',
         lastName: 'Riffel',
         photoUrl: "https://i.imgur.com/Cbf1P4q.png",
-        posters: []
     })
 
     const rhonda = new User({
@@ -41,16 +39,15 @@ User.remove({}).then(() => {
         firstName: 'Rhonda',
         lastName: 'Holloway',
         photoUrl: "https://i.imgur.com/k9IPbgp.png",
-        posters: []
     })
-
-    const riloBand = new Band({
-        bandName: 'Rilo Kiley',
-        hometown: 'Los Angeles',
-        profile: 'Indie Rock band with members Jenny Lewis, Blake Sennett, Pierre de Reeder, and Dave Rock',
-        imageUrl: 'https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-1/c71.0.480.480/p480x480/488009_421767014564976_284023470_n.jpg?oh=34a3f8bd166e83123bb03d1c3375dd37&oe=5AED0607',
-        website: 'https://www.rilokiley.com/',
-        yearFormed: 1998
+    
+    const nationalBand = new Band({
+        bandName: 'The National',
+        hometown: 'Cinncinati, OH',
+        profile: 'American Rock band with members Matt Berninger, Aaron Dessner, Bryce Dessner, Scott Devendorf and Bryan Devendorf',
+        imageUrl: 'https://i.imgur.com/Ldb4fbJ.jpg',
+        website: 'http://americanmary.com/',
+        yearFormed: 1999
     })
 
     diane.save()
@@ -66,11 +63,11 @@ User.remove({}).then(() => {
 
     .then(user => {
         console.log(`User ${user.username} created`)
-        return riloBand.save()
+        return nationalBand.save()
     })
 
     .then(band => {
-        riloBand.save()
+        nationalBand.save()
         mongoose.connection.close()
     })
 
