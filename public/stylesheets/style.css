@@ -183,6 +183,16 @@ aside {
   margin: 5px;
   border-radius: 5%;
   text-decoration: none;
+  max-width: 150px;
+}
+
+.button-add-band {
+  background-color: white;
+  padding: 15px;
+  margin: auto;
+  border-radius: 5%;
+  text-decoration: none;
+  max-width: 150px;
 }
 
 .button-edit:hover {

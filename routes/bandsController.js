@@ -26,7 +26,7 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
     const newBand = req.body
     if (!newBand.imageUrl) {
-        newBand.imageUrl = 'https://i.imgur.com/nbG1deE.png'
+        newBand.imageUrl = 'http://ultimateclassicrock.com/files/2015/06/Spinal-Tap-630x420.jpg'
     }
 
     Band.create(newBand)
