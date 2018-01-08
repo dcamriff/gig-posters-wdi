@@ -1,6 +1,24 @@
 <body class='page-other'>
-<div>
-    I'm the BANDS/SHOW page
-</div>
+    <div>
+        <a href="/users">Home</a> /
+        <a href="/bands/{{bandId}}">Bands</a> / {{band.bandName}}
+    </div>
+
+    <div>
+        <div>
+            <div class="band">
+                <img src="{{band.imageUrl}}" alt="{{band.bandName}} band profile">
+            </div>
+            <div class="poster-info">
+                <h2>{{band.bandName}}</h2>
+                <p>hometown: {{band.hometown}}</p>
+                <p>profile: {{band.profile}}</p>
+                <p>website: {{band.website}}</p>
+                <p>year formed: {{band.yearFormed}}</p>
+
+            </div>
+
+        </div>
+    </div>
 
 </body>

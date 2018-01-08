@@ -38,22 +38,23 @@ router.post('/', (req, res) => {
         })
 })
 
-// SHOW A BAND
-// router.get('/:bandId', (req, res) => {
-//     console.log("Get one band")
-//     const BandId = req.params.bandId
+// SHOW A PARTICULAR BAND
+router.get('/:bandId', (req, res) => {
+    console.log("Get one band")
+    const bandId = req.params.bandId
 
-//     Band.findById(bandId)
-//         .then((user) => {
-//             res.render('bands/show.hbs', {
-//                 band,
-//                 pageTitle: Band.bandName
-//             })
-//         })
-//         .catch((error) => {
-//             console.log(error)
-//         })
-// })
+    Band.findById(bandId)
+        .then((band) => {
+            res.render('bands/show', {
+                bandId,
+                band,
+                pageTitle: band.bandName
+            })
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
 
 // EDIT A BAND
 // router.get('/:bandId/edit', (req, res) => {
