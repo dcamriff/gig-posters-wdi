@@ -233,6 +233,14 @@ aside {
   font-size: 1.0rem;
 }
 
+/* POSTER SHOW PAGE */
+.poster img {
+  height: 390px;
+  width: 280px;
+  border-radius: 1%;
+  background: black;
+}
+
 /* .poster-card:hover {
   background: rgba(119, 91, 91, 0.7);
 } */

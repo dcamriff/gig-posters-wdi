@@ -1,19 +1,31 @@
 <body class='page-other'>
 <div>
-    I'm the POSTERS/SHOW page
     <a href="/users/{{userId}}">Profile</a> /
     <a href="/users{{userId}}/posters">Posters</a> / {{poster.title}}
 </div>
 
 <div>
     <div>
-        <h1>{{poster.title}}</h1>
-        <h3>{{poster.artist}}</h3>
-    </div>
-    <div class='posters'>
-        
+        <div class="poster">
+            {{#if poster.imageUrl}}
+            <img src="{{poster.imageUrl}}" alt="{{poster.title}} poster image"> {{else}}
+            <img src="https://i.imgur.com/xUNTDKM.jpg" alt="{{poster.title}} poster image">
+            {{/if}}
+        </div>
+        <div class="poster-info">
+        <h2>{{poster.title}}</h2>
+        <p>artist: {{poster.artist}}</p>
+        <p>comments: {{poster.story}}</p>
+        <p>medium: {{poster.mediumType}}</p>
+        <p>limted ed: {{poster.limtedEdition}}</p>
+        <p>year of show: {{poster.showYear}}</p>
+        <p>location: {{poster.showLocation}}</p>
+        <p>band: {{poster.band}}</p>
+
+        </div>
     </div>
     
-    <a class="button-muted" href="/users/{{userId}}/posters/{{poster._id}}/delete">Delete</a>
+    
+    <a class="button-muted" href="/users/{{userId}}/posters/{{poster._id}}/delete">remove</a>
 </div>
 </body>
