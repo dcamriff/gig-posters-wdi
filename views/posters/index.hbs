@@ -1,23 +1,27 @@
 <body class='page-other'>
 <div>
-    I'm the POSTERS/INDEX page
     <a href="/users/{{userId}}">Profile</a> / Posters
 </div>
 
-<div>
+<div class="user-container">
     <h1>{{userFullName}}'s Poster Collection</h1>
-    <div class='button-gold'>
-        <a href="/users/{{userId}}/posters/new">Add A Poster</a>
+    <div class='button-edit'>
+        <a href="/users/{{userId}}/posters/new">Add a Poster</a>
     </div>
 </div>
 
-<div>
+<div class="posters">
     {{#each posters}}
-    <div>
-        <a class='button-muted' href="/users/{{../userId}}/posters/{{this._id}}/delete">Delete</a>
+    <div class="poster-card">
+        <a class="cancel" href="/users/{{../userId}}/posters/{{this._id}}/delete">remove</a>
         <a href="/users/{{../userId}}/posters/{{this._id}}">
-            <h3>{{this.title}}</h3>
-        </a>
+        <div class="poster-image">
+            {{#if this.imageUrl}}
+            <img src="{{this.imageUrl}}" alt="{{this.title}} poster image"> {{else}}
+            <img src="https://i.imgur.com/xUNTDKM.jpg" alt="{{this.title}} poster image">
+            {{/if}}
+        </div>
+        <div><h4>{{this.title}}</h4></div>
     </div>
     {{/each}}
 </div>

@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     User.findById(userId)
         .then((user) => {
             res.render('posters/index', {
-                userFullName: `${user.findName} ${user.lastName}`,
+                userFullName: `${user.firstName} ${user.lastName}`,
                 userId: user._id,
                 posters: user.posters,
                 pageTitle: 'Posters'
