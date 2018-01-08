@@ -1,3 +1,4 @@
+/* -- GLOBAL STYLE --- */
 .page-home {
   /* background-color: aquamarine; */
   background-image: url("/images/bkrnd-home.png");
@@ -46,8 +47,11 @@ a {
 
 aside {
   align-items: center;
+  /* background-color: rgba(142, 81, 51, .2); */
 }
 
+
+/* --- USERS/INDEX page style  */
 .user-container {
   display: flex;
   flex-direction: column;
@@ -91,9 +95,46 @@ aside {
   justify-content: flex-end;
 }
 
+/* Links / Buttons (specifically anchor tag links right now) */
+/* .link-button {
+  color: white;
+  background-color: darkgreen;
+  border-radius: 2px;
+  padding: 15px 30px;
+  text-align: center;
+  width: 80px;
+  margin-bottom: 15px;
+  text-decoration: none;
+} */
+
+/* .link {
+  text-decoration: none;
+  color: black;
+} */
+
+.button-edit {
+  background-color: white;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 5%;
+  text-decoration: none;
+}
+.button-delete {
+  background-color: rgba(29, 13, 13, 0.794);
+  padding: 15px;
+  margin: 5px;
+  border-radius: 5%;
+  text-decoration: none;
+}
+
+/* BUTTON CONTAINERS */
 .button-container {
-  background-color: gray;
-  
+  display: flex;
+  justify-content: space-between;  
+}
+
+.button-container .button {
+  margin: 0 40px 0 0;
 }
 
 .btn-signup {
@@ -102,7 +143,7 @@ aside {
   /* background: #d18c1e; */
   padding: 15px;
   margin: 5px;
-  border-radius: 7%;
+  border-radius: 5%;
   text-decoration: none;
 }
 
