@@ -72,6 +72,12 @@ aside {
   align-items: center;
 }
 
+.user-container-indiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .user-bubbles-section {
   display: flex;
   justify-content: center;
@@ -240,14 +246,14 @@ aside {
 }
 
 .form-input input {
-  width: 60%;
+  width: 70%;
   padding: 10px;
   border: none;
   border-bottom: 1px dashed brown;
 }
 
 .form-input label {
-  width: 100px;
+  width: 200px;
 }
 
 /* .see-collection {

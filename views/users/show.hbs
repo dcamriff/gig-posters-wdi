@@ -1,41 +1,41 @@
-<body class="page-other">
-    <div>
-        <a href="/users">Home</a> / My Profile
-    </div>
+<body class="page-other"></body>
+<div>
+    <a href="/users">Home</a> / My Profile
+</div>
 
-    <div>
-        <div class="user-container">
-            <div></div>
-            <h1>{{user.firstName}} {{user.lastName}}</h1>
+<div>
+    <div class="user-container">
+        <h1>{{user.firstName}} {{user.lastName}}</h1>
 
-            <div class="button-container">
-                <div class="button-delete">
-                    <a href="/users/{{user._id}}/delete">delete me</a>
-                </div>
-
-                <div class="button-edit">
-                    <a href="/users/{{user._id}}/edit">edit me</a>
-                </div>
+        <div class="button-container">
+            <div class="button-delete">
+                <a href="/users/{{user._id}}/delete">delete me</a>
             </div>
 
-            <div class="user-bubble">
-                {{#if user.photoUrl}}
-                <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile picture"> {{else}}
-                <img src="/../public/images/pig-img.png" alt="{{user.username}}'s profile picture"> {{/if}}
+            <div class="button-edit">
+                <a href="/users/{{user._id}}/edit">edit me</a>
             </div>
+        </div>
 
-            <div class="user-profile">
-                <div>username:
-                    <b>{{user.username}}</b>
-                </div>
-                <div>email:
-                    <b>{{user.email}}</b>
-                </div>
-                <div class="see-collection">
-                    <a href="/users/{{user._id}}/posters">see my poster collection</a>
-                </div>
+        <div class="user-bubble">
+            {{#if user.photoUrl}}
+            <img src="{{user.photoUrl}}" alt="{{user.username}}'s profile picture"> {{else}}
+            <img src="/../public/images/pig-img.png" alt="{{user.username}}'s profile picture"> {{/if}}
+        </div>
+
+        <div class="user-profile">
+            <div>username:
+                <b>{{user.username}}</b>
+            </div>
+            <div>email:
+                <b>{{user.email}}</b>
+            </div>
+            <div class="see-collection">
+                <a href="/users/{{user._id}}/posters">see my poster collection</a>
             </div>
         </div>
     </div>
+</div>
+</div>
 
 </body>
