@@ -14,11 +14,11 @@
 }
 
 body {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* padding: 50px; */
-  /* font: 14px; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  font: 14px; */
   font-family: 'Montserrat', sans-serif;
   /* height: 80%;
   width: 80%;
@@ -26,7 +26,26 @@ body {
 }
 
 a {
-  color: rgb(31, 101, 78);
+  color: #1f654e;
+}
+
+.header {
+  display: flex;
+  flex-direction: column
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.logo {
+  padding: 20px 20px 5px 20px;
+}
+
+aside {
+  align-items: center;
 }
 
 .user-container {
@@ -75,6 +94,16 @@ a {
 .button-container {
   background-color: gray;
   
+}
+
+.btn-signup {
+  color:  gray;
+  background: black;
+  /* background: #d18c1e; */
+  padding: 15px;
+  margin: 5px;
+  border-radius: 7%;
+  text-decoration: none;
 }
 
 /* ----- other responsive layout forked example from codepen/girliemac -------- */
