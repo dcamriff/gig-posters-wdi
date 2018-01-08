@@ -1,6 +1,53 @@
 <body class='page-other'>
-<div>
-    I'm the BANDS/NEW page
-</div>
+    <div>
+        <a href="/users">Home</a> / Add a Band You Like!
+    </div>
+    <div class="user-container">
+
+
+        <div>
+            <h2>Add a Band</h2>
+            <div>
+                <form action="/bands" method="POST">
+
+                    <div class="form-input">
+                        <label for="bandName">band name:</label>
+                        <input type="text" name="bandName" required>
+                    </div>
+
+                    <div class='form-input'>
+                        <label for="hometown">hometown:</label>
+                        <input type="text" name="hometown">
+                    </div class='form-input'>
+
+                    <div class='form-input'>
+                        <label for="profile">profile:</label>
+                        <input type="text" name="profile">
+                    </div>
+
+                    <div class='form-input'>
+                        <label for="website">website:</label>
+                        <input type="text" name="website">
+                    </div>
+
+                    <div class='form-input'>
+                        <label for="yearFormed">yearFormed</label>
+                        <input type="text" name="YearFormed">
+                    </div>
+
+                    <div class='form-input'>
+                        <label for="imageUrl">Image URL:</label>
+                        <input type="text" name="imageUrl">
+                    </div>
+
+                    <div class='button-container flex-end'>
+                        <a href="/bands/{{band._id}}" class='button-delete'>cancel</a>
+                        <input class="button-edit" type="submit" value="create">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
 
 </body>
