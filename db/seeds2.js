@@ -41,8 +41,8 @@ User.remove({}).then(() => {
         photoUrl: "https://i.imgur.com/k9IPbgp.png",
     })
     
-    const nationalBand = new Band({
-        bandName: 'The National',
+    const nationalBand2 = new Band({
+        bandName: 'The National 2',
         hometown: 'Cinncinati, OH',
         profile: 'American Rock band with members Matt Berninger, Aaron Dessner, Bryce Dessner, Scott Devendorf and Bryan Devendorf',
         imageUrl: 'https://i.imgur.com/Ldb4fbJ.jpg',
