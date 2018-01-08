@@ -1,11 +1,13 @@
 <body class='page-other'>
-<div>
-    I'm the BANDS/INDEX page
-</div>
+    <div class='band-container'>
+        <div class='band-cards'>
+            <h3>I'm the BANDS/INDEX page</h3>
+            {{#each bands}}
 
-<div>
-    {{#each bands}}
-    {{/each}}
+            <a href="/bands/{{this._id}}" class="link band-card"></a>
+
+            <div class="band-name">{{this.bandName}}</div>
         </div>
-
+        {{/each}}
+    </div>
 </body>
