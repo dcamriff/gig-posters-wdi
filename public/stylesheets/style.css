@@ -231,8 +231,24 @@ aside {
   background: rgba(119, 91, 91, 0.7);
 } */
 
+/* FORM INPUT PAGES */
+.form-input {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 
+.form-input input {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px dashed brown;
+}
 
+.form-input label {
+  width: 100px;
+}
 
 /* .see-collection {
   background-color: #8E5133;
