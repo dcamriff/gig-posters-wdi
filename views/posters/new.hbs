@@ -1,72 +1,71 @@
 <body class='page-other'>
-<div>
-    <a href="/users/{{userId}}">Profile</a> /
-    <a href="/users{{userId}}/posters">Posters</a> / New Poster
-</div>
-
-<div>
-    <h2>Add a New Poster:</h2>
     <div>
-        <form action="/users/{{userId}}/posters" method="POST">
-
-        <div class='form-input'>
-            <label for="title">Poster Title:</label>
-            <input type="text" name="title" required>
-        </div>
-
-        <div>
-            <label for="story">Story Behind The Poster:</label>
-            <input type="text" name="story">
-        </div>
-
-        <div>
-            <label for="artist">Poster Artist:</label>
-            <input type="text" name="artist">
-        </div>
-
-        <div>
-            <label for="mediumType">Poster Medium:</label>
-            <input type="text" name="mediumType">
-        </div>
-
-        <div>
-            <label for="limitedEdition">Limited Edition?</label>
-            <input type="radio" name="limitedEdition" value="yes" checked> Yes / 
-            <input type="radio" name="limitedEdition" value="no"> No
-        </div>
-
-        <div>
-            <label for="imageUrl">Image URL:</label>
-            <input type="text" name="imageUrl">
-        </div>
-
-        <div>
-            <h3>Details about the gig ...</h3>
-        </div>
-
-        <div>
-            <label for="showYear">Show Year:</label>
-            <input type="text" name="showYear">
-        </div>
-
-        <div>
-            <label for="showLocation"> Show Location:</label>
-            <input type="text" name="showLocation">
-        </div>
-
-        <div>
-            <label for="band">Band:</label>
-            <input type="text" name="band">
-        </div>
-
-        <div class='button-container flex-end'>
-            <input class="button-gold" type="submit" value="Create Poster">
-            <a href="/users/{{user._id}}" class='button-muted'>Cancel</a>
-        </div>
-        </form>
+        <a href="/users/{{userId}}">Profile</a> /
+        <a href="/users{{userId}}/posters">Posters</a> / New Poster
     </div>
 
+    <div>
+        <h2>Add a Poster</h2>
+        <div>
+            <form action="/users/{{userId}}/posters" method="POST">
 
-</div>
+                <div class='form-input'>
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" required>
+                </div>
+
+                <div class='form-input'>
+                    <label for="story">Comments:</label>
+                    <input type="text" name="story">
+                </div class='form-input'>
+
+                <div class='form-input'>
+                    <label for="artist">Artist:</label>
+                    <input type="text" name="artist">
+                </div>
+
+                <div class='form-input'>
+                    <label for="mediumType">Poster Medium:</label>
+                    <input type="text" name="mediumType">
+                </div>
+
+                <div class='form-input'>
+                    <label for="limitedEdition">Limited Edition?</label>
+                    <input type="text" name="limitedEdition">
+                </div>
+
+                <div class='form-input'>
+                    <label for="imageUrl">Image URL:</label>
+                    <input type="text" name="imageUrl">
+                </div>
+
+                <div>
+                    <h3>Details about the gig ...</h3>
+                </div>
+
+                <div class='form-input'>
+                    <label for="showYear">Show Year:</label>
+                    <input type="text" name="showYear">
+                </div>
+
+                <div class='form-input'>
+                    <label for="showLocation"> Show Location:</label>
+                    <input type="text" name="showLocation">
+                </div>
+
+                <div class='form-input'>
+                    <label for="band">Band:</label>
+                    <input type="text" name="band">
+                </div>
+
+                <div class='button-container flex-end'>
+                    <a href="/users/{{user._id}}" class='button-delete'>cancel</a>
+                    <input class="button-edit" type="submit" value="create">
+                </div>
+            </form>
+        </div>
+
+
+    </div>
 
 </body>
