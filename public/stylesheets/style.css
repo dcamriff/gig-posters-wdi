@@ -45,6 +45,10 @@ a {
   padding: 20px 20px 5px 20px;
 }
 
+h1 {
+  font-family: 'Monteserrat', strong, sans-serif;
+}
+
 aside {
   align-items: center;
   /* background-color: rgba(142, 81, 51, .2); */
@@ -159,8 +163,16 @@ aside {
 
 /* USERS/SHOW page */
 .user-profile {
-  background-color: bisque;
+  background-color:black;
+  color: whitesmoke;
+  padding: 15px;
+  border-radius: 2%;
+  line-height: 200%;
 }
+
+/* .see-collection {
+  background-color: #8E5133;
+} */
 
 /* ----- other responsive layout forked example from codepen/girliemac -------- */
 * {
@@ -171,7 +183,7 @@ body {
   font: 1.2em/1.3em 'Montserrat', sans-serif;
 }
 h1 {
-  font-weight: normal;
+  font-weight: strong;
   text-align: right;
 }
 p {
