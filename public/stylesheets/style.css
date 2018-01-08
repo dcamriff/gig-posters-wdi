@@ -221,6 +221,14 @@ aside {
 }
 
 /* POSTERS/INDEX page */
+.poster-cards-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
 .posters {
   display: flex;
   flex-direction: column;
@@ -323,7 +331,7 @@ p {
  padding: 0;
  display: -webkit-flex;
  display: flex;
- -webkit-flex-flow: row;
+ -webkit-flex-flow: column;
  flex-flow: row;
 }
 

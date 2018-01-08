@@ -1,29 +1,33 @@
 <body class='page-other'>
-<div>
-    <a href="/users/{{userId}}">Profile</a> / Posters
-</div>
-
-<div class="user-container">
-    <h1>{{userFullName}}'s Poster Collection</h1>
-    <div class='button-edit'>
-        <a href="/users/{{userId}}/posters/new">Add a Poster</a>
+    <div>
+        <a href="/users/{{userId}}">Profile</a> / Posters
     </div>
-</div>
 
-<div class="posters">
-    {{#each posters}}
-    <div class="poster-card">
-        <a class="cancel" href="/users/{{../userId}}/posters/{{this._id}}/delete">remove</a>
-        <a href="/users/{{../userId}}/posters/{{this._id}}">
-        <div class="poster-image">
-            {{#if this.imageUrl}}
-            <img src="{{this.imageUrl}}" alt="{{this.title}} poster image"> {{else}}
-            <img src="https://i.imgur.com/xUNTDKM.jpg" alt="{{this.title}} poster image">
-            {{/if}}
+    <div class="user-container">
+        <h1>{{userFullName}}'s Poster Collection</h1>
+        <div class='button-edit'>
+            <a href="/users/{{userId}}/posters/new">Add a Poster</a>
         </div>
-        <div><h4>{{this.title}}</h4></div>
+
+        <div class="poster-cards-section">
+            <div class="posters">
+                {{#each posters}}
+                <div class="poster-card">
+                    <a class="cancel" href="/users/{{../userId}}/posters/{{this._id}}/delete">remove</a>
+                    <a href="/users/{{../userId}}/posters/{{this._id}}">
+                        <div class="poster-image">
+                            {{#if this.imageUrl}}
+                            <img src="{{this.imageUrl}}" alt="{{this.title}} poster image"> {{else}}
+                            <img src="https://i.imgur.com/xUNTDKM.jpg" alt="{{this.title}} poster image"> {{/if}}
+                        </div>
+                        <div>
+                            <h4>{{this.title}}</h4>
+                        </div>
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
     </div>
-    {{/each}}
-</div>
 
 </body>
