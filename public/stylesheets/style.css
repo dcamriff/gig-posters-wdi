@@ -115,6 +115,40 @@ aside {
   justify-content: flex-end;
 }
 
+/* BAND INDEX PAGE */
+.band-bubbles-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+.band-bubble {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 5px 5px;
+  margin-bottom: 20px;
+  width: 175px;
+  min-width: 150px;
+  height: 225px;
+  font-weight: bold;
+  /* color: #3d3636; */
+  color: #8E5133;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.band-bubble img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: black;
+}
+
 /* Links / Buttons (specifically anchor tag links right now) */
 /* .link-button {
   color: white;
