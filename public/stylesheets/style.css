@@ -112,6 +112,17 @@ aside {
   color: black;
 } */
 
+/* ALL BUTTONS OR BUTTON-LIKE LINKS */
+.btn-signup {
+  color:  gray;
+  background: black;
+  /* background: #d18c1e; */
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5%;
+  text-decoration: none;
+}
+
 .button-edit {
   background-color: white;
   padding: 15px;
@@ -119,12 +130,21 @@ aside {
   border-radius: 5%;
   text-decoration: none;
 }
+
+.button-edit:hover {
+  background-color: rgba(104, 58, 58, 0.454);
+}
+
 .button-delete {
   background-color: rgba(29, 13, 13, 0.794);
   padding: 15px;
   margin: 5px;
   border-radius: 5%;
   text-decoration: none;
+}
+
+.button-delete:hover {
+  background-color: rgb(163, 120, 12);
 }
 
 /* BUTTON CONTAINERS */
@@ -137,14 +157,9 @@ aside {
   margin: 0 40px 0 0;
 }
 
-.btn-signup {
-  color:  gray;
-  background: black;
-  /* background: #d18c1e; */
-  padding: 15px;
-  margin: 5px;
-  border-radius: 5%;
-  text-decoration: none;
+/* USERS/SHOW page */
+.user-profile {
+  background-color: bisque;
 }
 
 /* ----- other responsive layout forked example from codepen/girliemac -------- */
