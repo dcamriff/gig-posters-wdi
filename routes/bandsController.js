@@ -4,13 +4,13 @@ const User = require('../db/models/User')
 const Band = require('../db/models/Band')
 
 // GET BANDS LISTING
-
 router.get('/', (req, res) => {
     console.log("Get bands")
     Band.find({})
         .then((bands) => {
             res.render('bands/index', {
-                bands
+                bands,
+                pageTitle: 'Bands'
             })
         })
         .catch((error) => {
@@ -18,65 +18,25 @@ router.get('/', (req, res) => {
         })
 })
 
-
-
-
-
-// router.get('/', (req, res) => {
-//     console.log('Get All Bands')
-//     res.render('bands/index', {
-//        // bands
-//     })
-// })
-
-
-// router.get('/', (req, res) => {
-//     console.log("Get all")
-//     // Band.find({})
-//     //   .then((bands) => {
-//         res.render('bands/index', {
-//           bands,
-//           pageTitle: 'Bands'
-//         })
-//       })
-//   .catch((error) => {
-//     console.log(error)
-//   })
-//   })
-
-// router.get('/bands', (req, res) => {
-//     console.log("Get all bands")
-//     Band.find({})
-//         .then((bands) => {
-//             res.render('bands/index.hbs', {
-//                 bands,
-//                 pageTitle: 'Band'
-//             })
-//         })
-//         .catch((error) => {
-//             console.log(error)
-//         })
-// })
-
 // CREATE A NEW BAND
-// router.get('/new', (req, res) => {
-//     res.render('bands/new', {pageTitle: 'New Band'})
-// })
+router.get('/new', (req, res) => {
+    res.render('bands/new', { pageTitle: 'New Band' })
+})
 
-// router.post('/', (req, res) => {
-//     const newBand = req.body
-//     if (!newBand.imageUrl) {
-//         newBand.imageUrl = 'https://i.imgur.com/nbG1deE.png'
-//     }
+router.post('/', (req, res) => {
+    const newBand = req.body
+    if (!newBand.imageUrl) {
+        newBand.imageUrl = 'https://i.imgur.com/nbG1deE.png'
+    }
 
-//     Band.create(newBand)
-//         .then(() => {
-//             res.redirect('/bands')
-//         })
-//         .catch((error) => {
-//             console.log(error)
-//         })
-// })
+    Band.create(newBand)
+        .then(() => {
+            res.redirect('/bands')
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+})
 
 // SHOW A BAND
 // router.get('/:bandId', (req, res) => {
